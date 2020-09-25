@@ -1,0 +1,13 @@
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.cardExtra {
+  padding: 10px;
+  margin: 10px;
+  min-width: 120px;
+}
