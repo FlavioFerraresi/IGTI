@@ -1,0 +1,40 @@
+{
+  "nextId": 10,
+  "accounts": [
+    {
+      "id": 1,
+      "name": "tais aparecida fornazari ferraresi",
+      "balance": 3000.5
+    },
+    {
+      "id": 2,
+      "name": "flavio ferraresi",
+      "balance": 0.5
+    },
+    {
+      "id": 3,
+      "name": "maria julia ferraresi",
+      "balance": 100
+    },
+    {
+      "id": 6,
+      "name": "joao das couves e alfaces",
+      "balance": 201
+    },
+    {
+      "id": 7,
+      "name": "walter e sandra 10",
+      "balance": 1000
+    },
+    {
+      "id": 8,
+      "name": "flavio e tais 10",
+      "balance": 0
+    },
+    {
+      "id": 9,
+      "name": "freddy mercury",
+      "balance": 742.34
+    }
+  ]
+}

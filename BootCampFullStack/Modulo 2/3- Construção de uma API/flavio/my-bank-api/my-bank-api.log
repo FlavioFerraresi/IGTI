@@ -1,0 +1,63 @@
+2020-08-04T02:03:39.590Z [my-bank-api] info: api started!
+2020-08-04T02:04:20.136Z [my-bank-api] error: GET /account - ENOENT: no such file or directory, open 'C:\Users\flavio.fferraresi\Desktop\IGTI\Modulo 2\3- Construção de uma API\flavio\my-bank-api\accounts.json'
+2020-08-04T02:04:44.440Z [my-bank-api] info: api started and file created!
+2020-08-04T02:06:49.654Z [my-bank-api] info: api started!
+2020-08-04T02:07:34.959Z [my-bank-api] info: api started!
+2020-08-04T02:10:56.933Z [my-bank-api] info: api started!
+2020-08-04T02:11:10.098Z [my-bank-api] info: Post /account - {"id":7,"name":"walter e sandra","balance":100}
+2020-08-04T02:11:25.558Z [my-bank-api] info: Put /account - {"id":7,"name":"walter e sandra 10","balance":101.11}
+2020-08-04T02:11:36.049Z [my-bank-api] info: Patch /account/updateBalance - {"id":7,"balance":1000}
+2020-08-04T02:11:40.467Z [my-bank-api] info: Get /account
+2020-08-04T02:11:44.447Z [my-bank-api] info: Get /account/:id
+2020-08-04T02:11:49.159Z [my-bank-api] info: Get /account/:id
+2020-08-04T02:13:44.513Z [my-bank-api] info: api started!
+2020-08-04T02:13:54.545Z [my-bank-api] info: Get /account/:id - 7
+2020-08-04T02:20:27.850Z [my-bank-api] info: api started!
+2020-08-04T02:22:45.236Z [my-bank-api] info: api started!
+2020-08-04T02:22:52.816Z [my-bank-api] info: Get /account/:id - 710
+2020-08-04T02:23:00.117Z [my-bank-api] error: PUT /account - registro nao encontrado
+2020-08-04T02:24:04.605Z [my-bank-api] info: api started!
+2020-08-04T02:24:36.834Z [my-bank-api] info: Post /account - {"id":8,"name":"flavio e tais","balance":100}
+2020-08-04T02:25:04.199Z [my-bank-api] info: Put /account - {"id":8,"name":"flavio e tais 10","balance":100,"blabla":"blabla"}
+2020-08-04T02:25:09.388Z [my-bank-api] error: PUT /account - Name e Balance sao obrigatorios
+2020-08-04T02:25:24.467Z [my-bank-api] info: Put /account - {"id":8,"name":"flavio e tais 10","balance":0,"blabla":"blabla"}
+2020-08-04T02:27:02.360Z [my-bank-api] info: api started!
+2020-08-04T02:28:41.366Z [my-bank-api] info: api started!
+2020-08-04T02:29:19.568Z [my-bank-api] info: api started!
+2020-08-04T02:29:41.845Z [my-bank-api] error: PUT /account - ID, Name e Balance sao obrigatorios
+2020-08-04T02:30:26.115Z [my-bank-api] info: api started!
+2020-08-04T02:42:10.220Z [my-bank-api] info: api started!
+2020-08-04T02:42:25.779Z [my-bank-api] info: api started!
+2020-08-04T02:43:18.838Z [my-bank-api] info: Get /account
+2020-08-04T02:45:15.901Z [my-bank-api] info: api started!
+2020-08-04T02:46:52.271Z [my-bank-api] info: api started!
+2020-08-04T02:48:31.956Z [my-bank-api] info: api started!
+2020-08-04T02:48:36.289Z [my-bank-api] info: Get /account
+2020-08-04T02:56:35.327Z [my-bank-api] info: api started!
+2020-08-04T02:56:52.037Z [my-bank-api] info: Get /account
+2020-08-04T02:57:04.914Z [my-bank-api] info: Get /account
+2020-08-04T03:00:34.035Z [my-bank-api] info: api started!
+2020-08-04T03:00:38.544Z [my-bank-api] info: Get /account
+2020-08-04T03:00:40.650Z [my-bank-api] info: Get /account
+2020-08-04T03:01:00.841Z [my-bank-api] info: api started!
+2020-08-04T03:01:17.711Z [my-bank-api] info: Get /account
+2020-08-04T03:01:23.078Z [my-bank-api] info: Get /account
+2020-08-04T03:02:40.269Z [my-bank-api] info: api started!
+2020-08-04T03:02:49.655Z [my-bank-api] info: api started!
+2020-08-04T03:02:53.256Z [my-bank-api] info: Get /account
+2020-08-04T03:02:58.940Z [my-bank-api] info: Get /account
+2020-08-04T03:03:25.092Z [my-bank-api] info: api started!
+2020-08-04T03:03:41.624Z [my-bank-api] info: api started!
+2020-08-04T03:04:37.469Z [my-bank-api] info: api started!
+2020-08-04T03:04:45.888Z [my-bank-api] info: Get /account
+2020-08-04T03:04:51.460Z [my-bank-api] info: Get /account
+2020-08-04T03:05:32.554Z [my-bank-api] info: Get /account/:id - 1
+2020-08-04T03:05:56.341Z [my-bank-api] info: api started!
+2020-08-04T03:06:03.362Z [my-bank-api] info: api started!
+2020-08-04T03:06:12.489Z [my-bank-api] info: api started!
+2020-08-04T03:06:34.892Z [my-bank-api] info: api started!
+2020-08-04T03:22:10.855Z [my-bank-api] info: api started!
+2020-08-04T03:26:15.224Z [my-bank-api] info: api started!
+2020-08-04T03:27:03.206Z [my-bank-api] info: Get /account
+2020-08-04T03:27:38.946Z [my-bank-api] info: Post /account - {"id":9,"name":"freddy mercury","balance":742.34}
+2020-08-04T03:27:42.386Z [my-bank-api] info: Get /account

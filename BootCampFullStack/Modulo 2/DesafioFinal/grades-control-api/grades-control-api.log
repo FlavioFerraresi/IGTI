@@ -1,0 +1,16 @@
+2020-08-05T03:17:48.734Z [grades-control-api] info: api started!
+2020-08-05T03:18:41.179Z [grades-control-api] info: Get /grades/MediaNotas - 01 - JavaScript - Fórum
+2020-08-05T03:19:49.183Z [grades-control-api] info: Get /grades/MaioresNotas - 03 - React - Trabalho Prático
+2020-08-05T03:21:49.450Z [grades-control-api] info: Get /grades/MediaNotas - 02 - Node - Desafio
+2020-08-05T03:23:01.276Z [grades-control-api] info: Get /grades/somarNotas - Loiane Groner - 02 - Node
+2020-08-05T03:25:15.092Z [grades-control-api] info: Post /grades - {"id":49,"student":"Roberto Achar","subject":"03 - React","type":"Fórum","value":10,"timestamp":"2020-08-05T03:25:15.078Z"}
+2020-08-05T03:25:30.523Z [grades-control-api] info: Get /grades/somarNotas - Roberto Achar - 03 - React
+2020-08-05T03:27:25.027Z [grades-control-api] info: Get /grades/porId/:id - 33
+2020-08-05T03:28:02.155Z [grades-control-api] info: Get /grades/MediaNotas - 01 - JavaScript - Desafio
+2020-08-05T03:28:37.756Z [grades-control-api] info: Put /grades - {"id":33,"student":"Roberto Achar","subject":"01 - JavaScript","type":"Desafio","value":15,"timestamp":"2020-05-19T18:21:25.184Z"}
+2020-08-05T03:28:45.601Z [grades-control-api] info: Get /grades/porId/:id - 33
+2020-08-05T03:29:01.342Z [grades-control-api] info: Get /grades/MediaNotas - 01 - JavaScript - Desafio
+2020-08-05T03:29:52.983Z [grades-control-api] info: Get /grades/MediaNotas - 04 - MongoDB - Trabalho Prático
+2020-08-05T03:30:30.355Z [grades-control-api] info: Delete /grades/:id - 32
+2020-08-05T03:30:42.248Z [grades-control-api] info: Get /grades/MediaNotas - 04 - MongoDB - Trabalho Prático
+2020-08-05T03:31:17.006Z [grades-control-api] info: Get /grades/porId/:id - 43
