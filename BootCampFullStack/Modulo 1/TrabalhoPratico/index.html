@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Trabalho Prático Modulo 1</title>
+  </head>
+  <body>
+    <h1>Defina sua cor:</h1>
+    <div class="container">
+      <div class="divRed">
+        <p>(R) Vermelho:</p>
+        <input
+          type="range"
+          id="inputRed"
+          min="0"
+          max="255"
+          step="1"
+          value="0"
+        />
+        <input id="inputRedText" type="text" disabled value="0" />
+      </div>
+      <div class="divGreen">
+        <p>(G) Verde:</p>
+        <input
+          type="range"
+          id="inputGreen"
+          min="0"
+          max="255"
+          step="1"
+          value="0"
+        />
+        <input id="inputGreenText" type="text" disabled value="0" />
+      </div>
+      <div class="divBlue">
+        <p>(B) Azul:</p>
+        <input
+          type="range"
+          id="inputBlue"
+          min="0"
+          max="255"
+          step="1"
+          value="0"
+        />
+        <input id="inputBlueText" type="text" disabled value="0" />
+      </div>
+      <div class="resultColor" id="squareColor"></div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

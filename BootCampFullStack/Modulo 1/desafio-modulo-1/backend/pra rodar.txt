@@ -1,0 +1,1 @@
+pra rodar na pasta backend: npm run server1

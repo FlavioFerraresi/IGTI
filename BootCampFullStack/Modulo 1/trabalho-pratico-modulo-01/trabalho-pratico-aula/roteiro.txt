@@ -1,0 +1,10 @@
+Roteiro - Trabalho Prático do Módulo 01 ✔
+=========================================
+
+(✔) Fazer scaffolding do HTML, CSS e JavaScript
+(✔) Testar integração entre HTML, CSS e JavaScript
+(✔) Montar interface com HTML e CSS 
+(✔) Colocar id's nos elementos HTML 
+(✔) Mapear id's no JavaScript 
+(✔) Criar funções necessárias para que o app
+   funcione

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Simulador de cores</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-column">
+        <ul>
+          <li class="flex-row">
+            <span class="label">(R) Vermelho:</span>
+            <input
+              class="range"
+              type="range"
+              min="0"
+              max="255"
+              value="0"
+              id="rangeRed"
+            />
+            <input
+              type="number"
+              disabled
+              id="inputRed"
+              value="0"
+              min="0"
+              max="255"
+            />
+          </li>
+
+          <li class="flex-row">
+            <span class="label">(G) Verde:</span>
+            <input
+              class="range"
+              type="range"
+              min="0"
+              max="255"
+              value="0"
+              id="rangeGreen"
+            />
+            <input
+              type="number"
+              disabled
+              id="inputGreen"
+              value="0"
+              min="0"
+              max="255"
+            />
+          </li>
+
+          <li class="flex-row">
+            <span class="label">(B) Azul:</span>
+            <input
+              class="range"
+              type="range"
+              min="0"
+              max="255"
+              value="0"
+              id="rangeBlue"
+            />
+            <input
+              type="number"
+              disabled
+              id="inputBlue"
+              value="0"
+              min="0"
+              max="255"
+            />
+          </li>
+        </ul>
+
+        <div class="square" id="square"></div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
