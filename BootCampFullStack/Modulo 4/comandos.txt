@@ -1,0 +1,245 @@
+igti1234
+
+db.student.insertOne({name:"flavio ferraresi"});
+
+db.student.insertMany([{name:"flavio ferraresi", subject:"matematica",type:"trabalho pratico","value":11.0},{name:"Tais ferraresi", subject:"quimica",type:"trabalho pratico", value:11.0}])
+
+db.student.insert({name:"Maria julia ferraresi", subject:"fisica",type:"trabalho pratico","value":15.0})
+
+db.student.find()
+
+db.student.find(query, projection)
+db.student.find({}, {_id:0,name:1,value:1})
+db.student.find({}, {_id:0,name:1,value:1}).limit(2)
+db.student.find({}, {_id:0,name:1,value:1}).sort({name:1})
+db.student.find({}, {_id:0,name:1,value:1}).sort({name:-1})
+db.student.find({}, {}).pretty()
+
+db.student.findOne()
+
+db.student.find({name:"flavio ferraresi"}, {_id:0}).pretty()
+
+db.student.find({$and:[{subject: "quimica"},{type: "trabalho pratico"}]})
+
+$not
+
+db.student.find({$nor:[{subject: "quimica"},{type: "trabalho pratico"}]})
+
+ 
+db.student.find({$or: [{subject :"quimica"},{subject: "matematica"}]})
+
+operadores logicos
+$and
+$not
+$nor
+$or
+
+operadores comparacao
+$eq - igual
+$gt - maior que
+$gte -maior ou igual
+$in - pertence
+$lt - menor que
+$lte - menor ou igual que
+$ne - nao igual
+$nin - nao pertence
+
+
+db.student.find({value : {$gte:10}})
+db.student.find({subject : {$in: ["quimica", "matematica"]}})
+
+
+db.student.updateOne(query,update,options)
+db.student.updateOne({name: "Maria julia"},{$set: {type:"Tratabalho Pratico"}})
+
+db.student.updateOne({name: "flavio ferraresi"},{$inc: {value:20}})
+
+db.student.updateMany({subject: "matematica"},{$inc: {value:2}})
+
+db.student.updateMany({},{$set: {lastModified:"$$NOW", timestamp: "$$CLUSTER_TIME"}})
+
+db.student.updateMany({},{$currentDate: {lastModified:true, timestamp: {$type:"timestamp"}}})
+
+
+db.student.updateMany({},{$unset: {timestamp:1}})
+
+
+db.student.replaceOne({_id: ObjectId("5f4460dd20284752e48d29c9")},{name: "flavio da silva", subject:"portugues", type:"prova final", value: 2, {{$currentDate: {lastModified:true}}}})
+
+
+
+
+db.student.deleteOne({_id: ObjectId("5f44740393614182ae380f69")})
+db.student.deleteMany({subject:"fisica"})
+
+
+db.student.bulkWrite([op1,op2,...])
+
+db.student.bulkWrite([
+{insertOne: {
+   "document" : {name:"joao das couves", subject:"historia",type:"trabalho pratico","value":11.0, timestamp: new Date()}
+            }},
+{insertOne: {
+   "document" : {name:"sandra", subject:"geografia",type:"trabalho pratico","value":12.0, timestamp: new Date()}
+            }},
+{updateOne: {
+   "filter": {name: "Tais ferraresi"},
+   "update": {$set: {subject : "biologia"}}
+            }},
+{deleteOne: {
+   "filter": {_id: ObjectId("5f4473f693614182ae380f68")}
+            }},
+{replaceOne: {
+   "filter": {_id: ObjectId("5f446d2993614182ae380f66")},
+   "replacement": {name:"walter", subject:"geografia",type:"desafio pratico","value":12.0, timestamp: new Date()}
+            }},            
+            
+            
+   ], {ordered: false})
+   
+ordered: false vai rodar tudo em paralelo  
+
+
+ --- indices
+db.student.getIndexes()
+
+--indice por name descendente
+db.student.createIndex({name: -1})
+db.student.dropIndex("name_-1")
+db.student.dropIndex({name:-1})
+db.student.dropIndexes()  --dropa todos menos o id
+
+--para melhorar a busca por texto dentro do campo nome
+db.student.createIndex({name:"text"})
+
+--para utilizar o index textual
+db.student.find({#text: {$search: "escritora jornalista"}},{_id:1})
+
+--para exibir os que mais deram "match" que mais combinaram
+db.student.find({#text: {$search: "escritora jornalista"}},{_id:1, score: {$meta: "textScore"}}).sort({score: {$meta: "textScore"}}).limit(3)
+
+
+--agregação
+db.collection.aggregate([
+{$project: {}},
+{$match: {campo: "x"}},
+{$group: {_id: "$campo", total: {$sum: "$campo"}}},
+{$sort: {{campo: 1, campo2: -1}},
+{$skip: N},
+{$limit: N}
+])
+
+db.student.aggregate([
+{$group: {_id: null, total: {$sum: "$value"}}}])
+
+db.student.aggregate([
+{$group: {_id: null, total: {$avg: "$value"}}}])
+
+db.student.aggregate([
+{$match: {subject: "historia"}},
+{$group: {_id: null, total: {$sum: "$value"}}}])
+
+db.student.aggregate([
+{$match: {subject: "historia"}},
+{$group: {_id: {subject: "$subject", type: "$type"}, total: {$sum: "$value"}}}])
+
+db.student.aggregate([
+{$match: {subject: "historia"}},
+{$group: {_id: {subject: "$subject", type: "$type"}, total: {$sum: "$value"}}},
+{$sort: {_id: 1}
+])
+
+db.collection.count(query)
+db.student.count({
+subject: "matematica"})
+
+
+db.student.countDocuments({
+subject: "matematica"})
+
+
+db.student.distinct("subject")
+
+
+
+
+git
+----
+git config --system  (configuracao global para todos os usuarios)
+git config --global  (configuracao para um usuario)
+git config --local   (configuracao para o projeto)
+git config --list --show-origem (lista todas as configuracoes)
+gti config --list
+
+git config --global user.name "flavio.ferraresi"
+git config --global user.email "flavio.ferraresi@teste.com.br"
+
+
+workspace   ---- Index   ----  head   ----   repositorio remoto
+
+commit -a (transfere do workspace para a head)
+add (transferie do workspace para index)
+
+checkout HEAD (traz tudo que ta na head para o workspace)
+checkout (traz da index para o workspace)
+
+diff (compara workspace com index)
+diff HEAD (compara workspace com a head)
+
+push (transfere da head para repositorio remoto
+pull (transfere do repositorio remoto para o workspace) deve ser feito sempre antes do commit/push
+fetch (transfere do repositorio remoto para a head)
+
+
+utilizando----
+git init - para iniciar o repositorio
+criar o .gitignore com o conteudo node_modules
+git add * - para adicionar todos os arquivos para a area index
+git add -A (transfere apenas modificados
+git add *.js (apenas de uma extensao)
+git commit
+git status -- pra ver o que esta na area temporaria
+gitk --para ver os commits
+git commit -m "adiciona comentarios"
+git commit --amend -m "adiciona comentarios revisao de commit"
+
+git branch (para ver os branchs criados)
+git checkout -b "nomedabranch" (cria e muda a branch)
+
+git checkout master (volta para a branch master)
+
+git merge nomedabranch (traz as alteracoes da branch para a master)
+
+git branch -d nomedabranch (para remover a branch)
+
+git log (para ver o log da branch)
+
+
+apos criar repositorio no github
+--------------------------------
+git remote add origin "caminhdo do diretorio remoto" pegar no github
+git push -u origin master (transporta do head para o repositorio remoto)
+
+apos realizar alteracoes realizadas direto pelo github
+------------------------------------------------------
+git pull (traz as alteracoes do repositorio remoto para o workspace)
+
+git fetch (atualiza head com o que tem no repositorio remoto)
+
+
+
+
+heroku
+-----------------------------
+heroku create
+heroku apps:rename backend-api-students
+
+git remote -v (exibe as aplicacoes)
+
+criar arquivo Procfile
+web: node -r dotenv/config --experimental-modules app.js
+
+git push heroku master (para subir os fontes no heroku)
+
+heroku logs --tail (para ver os logs das requisicoes)
+
